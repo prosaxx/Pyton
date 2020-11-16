@@ -1,0 +1,81 @@
+﻿
+@{
+    ViewBag.Title = "Cliente";
+}
+
+<h2>Cliente</h2>
+<button type="button" class="btn btn-primary" onclick="Editar(0);">Novo Cliente</button>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Fone
+                    </th>
+                    <th style="width: 200px;">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbCliente">
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+
+<script>
+    $(document).ready(function () {
+        Obter();
+    });
+
+
+    function Obter() {
+        $('#tbCliente').html('');
+        $.ajax({
+            url: "https://localhost:44397/api/cliente/obter",
+            method: "GET",
+            success: function (dataRetorno) {
+
+                for (var i = 0; i < dataRetorno.length; i++) {
+                    var value = dataRetorno[i];
+                    var str = '';
+                    str += '<tr>';
+                    str += '<td>' + value.nome + '</td>';
+
+                    str += '<td>' + value.fone + '</td>';
+
+
+                    str += '<td><div class="form-group">' +
+                        '<button type="button" class="btn btn-primary" onclick="Editar(' + value.id + ');">Editar</button>' +
+                        '<button type="button" class="btn btn-danger" onclick="Deletar(' + value.id + ');">Deletar</button>' +
+                        '</div></td>';
+
+                    str += '</tr>';
+
+                    $('#tbCliente').append(str);
+                }
+            }
+        });
+
+    }
+    function Editar(id) {
+        var url = "@Url.Action("Salvar")";
+        location.href = url + "?id=" + id;
+    }
+    function Deletar(id) {
+        $.ajax({
+            url: "https://localhost:44397/api/cliente/deletar?id=" + id,
+            method: "GET",
+            success: function (dataRetorno) {
+
+                alert(dataRetorno);
+                Obter();
+            }
+        });
+    }
+</script>

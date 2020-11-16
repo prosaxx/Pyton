@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30711.63
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.API", "Loja.API\Loja.API.csproj", "{FAF346A4-35F6-4266-BCB9-ECA987307D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.WEB", "Loja.WEB\Loja.WEB.csproj", "{6A54B864-B40A-4651-9A43-E786B902B248}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FAF346A4-35F6-4266-BCB9-ECA987307D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF346A4-35F6-4266-BCB9-ECA987307D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF346A4-35F6-4266-BCB9-ECA987307D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF346A4-35F6-4266-BCB9-ECA987307D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A54B864-B40A-4651-9A43-E786B902B248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A54B864-B40A-4651-9A43-E786B902B248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A54B864-B40A-4651-9A43-E786B902B248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A54B864-B40A-4651-9A43-E786B902B248}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8781B200-4834-4432-86BD-E20B36F7E79B}
+	EndGlobalSection
+EndGlobal
